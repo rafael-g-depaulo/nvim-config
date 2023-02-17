@@ -22,6 +22,9 @@ return require('packer').startup(function(use)
     use('theprimeagen/harpoon')
     use('mbbill/undotree')
 
+    -- git stuff
+    use('tpope/vim-fugitive')
+
     -- themes
     use 'tomasiser/vim-code-dark'
 end)

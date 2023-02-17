@@ -113,6 +113,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ragan/.local/share/nvim/site/pack/packer/start/vim-code-dark",
     url = "https://github.com/tomasiser/vim-code-dark"
+  },
+  ["vim-fugitive"] = {
+    loaded = true,
+    path = "/home/ragan/.local/share/nvim/site/pack/packer/start/vim-fugitive",
+    url = "https://github.com/tpope/vim-fugitive"
   }
 }
 
