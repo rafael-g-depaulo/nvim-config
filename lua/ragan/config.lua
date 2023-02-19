@@ -1,9 +1,21 @@
-vim.cmd("set number relativenumber")
-vim.cmd("set cursorline")
-vim.cmd("set cursorcolumn")
 vim.cmd("syntax on")
 
-vim.cmd("set tabstop=4")
-vim.cmd("set shiftwidth=4")
-vim.cmd("set expandtab")
+-- cursor and line numbers
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.cursorline = true
+vim.opt.cursorcolumn = true
+
+-- tabs and scrolling
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.scrolloff = 6
+vim.opt.expandtab = true
+
+-- search
+vim.opt.hlsearch = false
+vim.opt.incsearch = true
+
+-- idk, i just coppied primagean
+vim.opt.termguicolors = true
 

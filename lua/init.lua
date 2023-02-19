@@ -1,3 +1,2 @@
 require("ragan")
-print("oooi")
 
