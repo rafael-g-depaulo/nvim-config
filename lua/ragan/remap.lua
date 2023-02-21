@@ -20,3 +20,18 @@ vim.keymap.set("v", "<leader>y", "\"+y")
 
 -- map <C-c> to esc because there's sometimes a difference in visual-insert mode
 vim.keymap.set("i", "<C-c>", "<Esc>")
+
+-- splits
+vim.keymap.set("n", "<C-h>", "<C-w>h")
+vim.keymap.set("n", "<C-j>", "<C-w>j")
+vim.keymap.set("n", "<C-k>", "<C-w>k")
+vim.keymap.set("n", "<C-l>", "<C-w>l")
+
+vim.keymap.set("", "<C-Left>", ":vertical resize +3<CR>")
+vim.keymap.set("", "<C-Right>", ":vertical resize -3<CR>")
+vim.keymap.set("", "<C-Up>", ":resize +3<CR>")
+vim.keymap.set("", "<C-Down>", ":resize -3<CR>")
+
+vim.keymap.set("", "<leader>th", "<C-w>t<Cw>H")
+vim.keymap.set("", "<leader>tk", "<C-w>t<Cw>K")
+

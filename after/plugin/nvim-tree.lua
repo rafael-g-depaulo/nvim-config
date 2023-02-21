@@ -14,7 +14,7 @@ require("nvim-tree").setup()
 
 -- OR setup with some options
 require("nvim-tree").setup({
-  open_on_setup = true,
+  -- open_on_setup = true, -- deprecated, apparently
   sort_by = "case_sensitive",
   view = {
     width = 30,
@@ -33,4 +33,11 @@ require("nvim-tree").setup({
 })
 
 vim.keymap.set("n", "<leader>pf", nvimTree.tree.toggle)
+
+local function open_nvim_tree()
+  -- open the tree
+  require("nvim-tree.api").tree.open()
+end
+
+vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
 

@@ -12,6 +12,10 @@ vim.opt.shiftwidth = 2
 vim.opt.scrolloff = 6
 vim.opt.expandtab = true
 
+-- splits
+vim.opt.splitbelow = true
+vim.opt.splitright = true
+
 -- search
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
