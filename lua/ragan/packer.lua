@@ -11,7 +11,6 @@ return require('packer').startup(function(use)
 	    'nvim-telescope/telescope.nvim', tag = '0.1.1',
 	    -- or                            , branch = '0.1.x',
 
-
 	    requires = { {'nvim-lua/plenary.nvim'} }
     }
 
@@ -49,7 +48,38 @@ return require('packer').startup(function(use)
       }
     }
 
+    use('lukas-reineke/indent-blankline.nvim', {
+        show_current_context = true,
+        show_current_context_start = true,
+        show_trailing_blankline_indent = false,
+    })
+
+    -- -- comment lines in visual mode
+    -- use('numToStr/Comment.nvim')
+
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    }
+
+    use {
+        'lewis6991/gitsigns.nvim',
+        -- tag = 'release' -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
+    }
+
+    -- file tree
+    use {
+        'nvim-tree/nvim-tree.lua',
+        requires = {
+            'nvim-tree/nvim-web-devicons', -- optional, for file icons
+        },
+        tag = 'nightly' -- optional, updated every week. (see issue #1193)
+    }
+
     -- themes
     use 'tomasiser/vim-code-dark'
+
+    -- devicons (and apparently it needs to be the last import
+    use 'ryanoasis/vim-devicons'
 end)
 
