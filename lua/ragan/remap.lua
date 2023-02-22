@@ -1,5 +1,6 @@
 vim.g.mapleader = ","
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+-- vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>pv", require("nvim-tree.api").tree.toggle)
 
 -- vertical movement. remap page up/down to also center view
 vim.keymap.set("n", "<C-d>", "<C-d>zz", { noremap = true })
@@ -35,6 +36,8 @@ vim.keymap.set("", "<C-Down>", ":resize -3<CR>")
 vim.keymap.set("", "<leader>th", "<C-w>t<Cw>H")
 vim.keymap.set("", "<leader>tk", "<C-w>t<Cw>K")
 
+
+
 -- doesn't work and lags really bad, but maybe i can fix it in the future
 -- vim.cmd([[
 --   function! WSLCopy()
@@ -54,4 +57,4 @@ vim.keymap.set("", "<leader>tk", "<C-w>t<Cw>K")
 -- ]])
 
 -- Use <CMD> instead of : to avoid executing on a visual range.
-vim.keymap.set("v", "<leader>y", "<CMD>call WSLCopy()<CR>")
+-- vim.keymap.set("v", "<leader>y", "<CMD>call WSLCopy()<CR>")
