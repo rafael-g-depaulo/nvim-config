@@ -36,25 +36,6 @@ vim.keymap.set("", "<C-Down>", ":resize -3<CR>")
 vim.keymap.set("", "<leader>th", "<C-w>t<Cw>H")
 vim.keymap.set("", "<leader>tk", "<C-w>t<Cw>K")
 
+-- this sends the yanked selection to the linux clipboard through xclip
+vim.keymap.set("v", "<leader>y", "y:call system('xclip', @@)<CR>")
 
-
--- doesn't work and lags really bad, but maybe i can fix it in the future
--- vim.cmd([[
---   function! WSLCopy()
---     " Save the unnamed register and its type.
---     let last_yank = getreg()
---     let last_yank_type = getregtype()
--- 
---     " Copy the selection.
---     execute "normal! y"
---     " Add carriage returns for Windows, and send the text to the clipboard.
---     let windows_text = getreg() " ->substitute("\n", "\r\n", "g")
---     silent execute system("clip.exe", windows_text)
--- 
---     " Restore the unnamed register.
---     call setreg('"', last_yank, last_yank_type)
---   endfunction
--- ]])
-
--- Use <CMD> instead of : to avoid executing on a visual range.
--- vim.keymap.set("v", "<leader>y", "<CMD>call WSLCopy()<CR>")
