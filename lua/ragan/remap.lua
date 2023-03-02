@@ -30,6 +30,7 @@ vim.keymap.set("n", "<C-h>", "<C-w>h")
 vim.keymap.set("n", "<C-j>", "<C-w>j")
 vim.keymap.set("n", "<C-k>", "<C-w>k")
 vim.keymap.set("n", "<C-l>", "<C-w>l")
+vim.keymap.set("n", "<C-w>", ":clo<CR>") -- close current split
 
 -- Alt + arrow keys change size of current split
 vim.keymap.set("", "<Esc>[[1;5D", ":vertical resize +3<CR>")
