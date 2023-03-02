@@ -14,6 +14,9 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
+-- Save
+vim.keymap.set("n", "<C-s>", ":w<CR>")
+
 -- yank to clipboard
 vim.keymap.set("n", "<leader>y", "\"+y")
 vim.keymap.set("n", "<leader>Y", "\"+y")
@@ -28,10 +31,11 @@ vim.keymap.set("n", "<C-j>", "<C-w>j")
 vim.keymap.set("n", "<C-k>", "<C-w>k")
 vim.keymap.set("n", "<C-l>", "<C-w>l")
 
-vim.keymap.set("", "<C-Left>", ":vertical resize +3<CR>")
-vim.keymap.set("", "<C-Right>", ":vertical resize -3<CR>")
-vim.keymap.set("", "<C-Up>", ":resize +3<CR>")
-vim.keymap.set("", "<C-Down>", ":resize -3<CR>")
+-- Alt + arrow keys change size of current split
+vim.keymap.set("", "<Esc>[[1;5D", ":vertical resize +3<CR>")
+vim.keymap.set("", "<Esc>[[1;5C", ":vertical resize -3<CR>")
+vim.keymap.set("", "<Esc>[[1;5A", ":resize +3<CR>")
+vim.keymap.set("", "<Esc>[[1;5B", ":resize -3<CR>")
 
 vim.keymap.set("", "<leader>th", "<C-w>t<Cw>H")
 vim.keymap.set("", "<leader>tk", "<C-w>t<Cw>K")
