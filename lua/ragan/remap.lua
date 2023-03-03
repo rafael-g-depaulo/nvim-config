@@ -32,11 +32,11 @@ vim.keymap.set("n", "<C-k>", "<C-w>k")
 vim.keymap.set("n", "<C-l>", "<C-w>l")
 vim.keymap.set("n", "<C-w>", ":clo<CR>") -- close current split
 
--- Alt + arrow keys change size of current split
-vim.keymap.set("", "<Esc>[[1;5D", ":vertical resize +3<CR>")
-vim.keymap.set("", "<Esc>[[1;5C", ":vertical resize -3<CR>")
-vim.keymap.set("", "<Esc>[[1;5A", ":resize +3<CR>")
-vim.keymap.set("", "<Esc>[[1;5B", ":resize -3<CR>")
+-- Shift + arrow keys change size of current split (for some reason vertical is doing the opposite of what i'd expect here)
+vim.keymap.set("", "<S-Up>", ":resize +3<CR>")
+vim.keymap.set("", "<S-Down>", ":resize -3<CR>")
+vim.keymap.set("", "<S-Right>", ":vertical resize +3<CR>")
+vim.keymap.set("", "<S-Left>", ":vertical resize -3<CR>")
 
 vim.keymap.set("", "<leader>th", "<C-w>t<Cw>H")
 vim.keymap.set("", "<leader>tk", "<C-w>t<Cw>K")
