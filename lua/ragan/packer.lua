@@ -54,8 +54,8 @@ return require('packer').startup(function(use)
         show_trailing_blankline_indent = false,
     })
 
-    -- -- comment lines in visual mode
-    -- use('numToStr/Comment.nvim')
+    -- comment lines in visual mode
+    use('numToStr/Comment.nvim')
 
     use {
         'nvim-lualine/lualine.nvim',
@@ -75,6 +75,10 @@ return require('packer').startup(function(use)
         },
         tag = 'nightly' -- optional, updated every week. (see issue #1193)
     }
+
+    -- cool tabs
+    use 'nvim-tree/nvim-web-devicons'
+    use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
 
     use {
       "windwp/nvim-autopairs",
